@@ -1,0 +1,10 @@
+def f(x):
+    return x**3 - x - 2
+
+a = 1
+b = 2
+
+if f(a) * f(b) < 0:
+    print("Root exists between", a, "and", b)
+else:
+    print("Root may not exist in the given interval")
