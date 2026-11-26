@@ -1,0 +1,19 @@
+ #newton raphson
+import math
+def func(x):
+    z=x**2+4*math.sin(x)
+    return(z)
+def funcs(x):
+    y=2*x+4*math.cos(x)
+    return(y)
+x0=float(input("enter a number"))
+
+n=int(input("number of iteration")) 
+for i in range(n+1):
+    f_x0=func(x0)
+    f_x1=funcs(x0)
+    print(f_x0,f_x1)
+    x1=x0-(f_x0/f_x1)
+    print(x1)
+    x0=x1
+print("root of equation is", x1)
