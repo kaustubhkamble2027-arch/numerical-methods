@@ -1,0 +1,24 @@
+x=[]
+y=[]
+n=int(input("enter values of entries: "))
+print("Enter values of x")
+for i in range(n):
+    ele=float(input())
+    x.append(ele)
+print(x)
+print("enter values of y")
+for i in range(n):
+    ele=float(input())
+    y.append(ele)
+print(y)
+xr=float(input("enter the value of x for which y is to be calculated: "))
+h=x[1]-x[0]
+p=(xr-x[0])/h
+yp=y[0]
+s=1
+for i in range(1,n-1):
+    for j in range(n-1):
+        y[j]=y[j+1]-y[j]
+    s=s*(p-i+1)/i
+    yp=yp+s*y[0]
+print("yp: ",yp)
