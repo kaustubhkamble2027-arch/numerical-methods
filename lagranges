@@ -1,0 +1,23 @@
+x=[]
+y=[]
+n=int(input("enter values of entries: "))
+print("Enter values of x")
+for i in range(n):
+    ele=float(input())
+    x.append(ele)
+print(x)
+print("enter values of y")
+for i in range(n):
+    ele=float(input())
+    y.append(ele)
+print(y)
+xr=float(input("enter the value of x for which y is to be calculated: "))
+fy=0
+for j in range(0,n):
+    num=1
+    den=1
+    for i in range(0,n):
+        if(i!=j):
+            num=num*(xr-x[i])
+            den=den*(x[j]-x[i])
+    fy=float(fy+(num/den)*y[j])
