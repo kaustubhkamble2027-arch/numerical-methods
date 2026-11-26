@@ -1,0 +1,31 @@
+print("Program for Jacobi's Method")
+
+def f1(x, y, z):
+    return (17 - y + 2*z) / 20
+
+def f2(x, y, z):
+    return (-18 - 3*x + z) / 20
+
+def f3(x, y, z):
+    return (25 - 2*x + 3*y) / 20
+
+# Inputs
+x0 = float(input("Enter initial value for x: "))
+y0 = float(input("Enter initial value for y: "))
+z0 = float(input("Enter initial value for z: "))
+n = int(input("Enter number of iterations: "))
+
+# Iteration loop
+for i in range(n):
+    x1 = f1(x0, y0, z0)
+    y1 = f2(x0, y0, z0)
+    z1 = f3(x0, y0, z0)
+
+    print("Iteration", i+1)
+    print("x =", x1, "\ty =", y1, "\tz =", z1)
+
+    x0 = x1
+    y0 = y1
+    z0 = z1
+
+print("End")
