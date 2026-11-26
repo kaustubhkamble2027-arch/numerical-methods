@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Numerical Methods | Python Code Library</title><style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6fb;
+    color: #222;
+}
+
+header {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.search {
+    width: 100%;
+    padding: 13px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.card h3 {
+    color: #1d4ed8;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+footer {
+    background: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style></head><body><header>
+<h1>Numerical Methods</h1>
+<p>Python Code Library</p>
+<p>Learn | Practice | Implement</p>
+</header><div class="container"><h2>Available Programs</h2><input type="text" class="search" id="search"
+placeholder="Search numerical methods..."
+onkeyup="searchMethods()">
+
+<div id="programs"><div class="card">
+<h3>Bisection Method</h3>
+<p>Find roots of nonlinear equations.</p>
+<a href="codes/bisection.py" download>
+<button>Download Code</button>
+</a>
+</div><div class="card">
+<h3>Regula Falsi Method</h3>
+<p>Find roots using the false position method.</p>
+<a href="codes/regula_falsi.py" download>
+<button>Download Code</button>
+</a>
+</div><div class="card">
+<h3>Newton Raphson Method</h3>
+<p>Find approximate roots using derivatives.</p>
+<a href="codes/newton_raphson.py" download>
+<button>Download Code</button>
+</a>
+</div><div class="card">
+<h3>Secant Method</h3>
+<p>Find roots using two initial approximations.</p>
+<a href="codes/secant.py" download>
+<button>Download Code</button>
+</a>
+</div><div class="card">
+<h3>Gauss Elimination Method</h3>
+<p>Solve simultaneous linear equations.</p>
+<a href="codes/gauss_elimination.py" download>
+<button>Download Code</button>
+</a>
+</div><div class="card">
+<h3>Gauss Seidel Method</h3>
+<p>Iterative solution of linear equations.</p>
+<a href="codes/gauss_seidel.py" download>
+<button>Download Code</button>
+</a>
+</div><div class="card">
+<h3>Trapezoidal Rule</h3>
+<p>Numerical integration using trapezoids.</p>
+<a href="codes/trapezoidal.py" download>
+<button>Download Code</button>
+</a>
+</div><div class="card">
+<h3>Simpson's 1/3 Rule</h3>
+<p>Numerical integration using Simpson's rule.</p>
+<a href="codes/simpson_1_3.py" download>
+<button>Download Code</button>
+</a>
+</div><div class="card">
+<h3>Intermediate Value Theorem</h3>
+<p>Check whether a continuous function has a root in an interval.</p>
+<a href="codes/intermediate_value.py" download>
+<button>Download Code</button>
+</a>
+</div></div>
+</div><footer>
+<p>Numerical Methods Python Code Library</p>
+<p>Created for Educational Purposes</p>
+</footer><script>
+function searchMethods() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        card.style.display =
+        card.innerText.toLowerCase().includes(input) ? "" : "none";
+    });
+}
+</script></body>
+</html>
